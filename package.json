@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "commit": "sh -c 'git add . && git commit -m \"$0\" && git push -u origin main'"
+    "commit": "sh -c 'git add . && git commit -m \"$0\" && git push -u origin main'",
+    "clearcache": "git rm -r --cached .",
+    "deploy": "webpack && firebase deploy"
   },
   "repository": {
     "type": "git",

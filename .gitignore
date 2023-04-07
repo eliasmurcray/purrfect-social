@@ -1,3 +1,11 @@
 node_modules
 public
 package-lock.json
+
+# Mac
+.DS_STORE
+
+# Windows
+Thumbs.db
+desktop.ini
+.idea/
