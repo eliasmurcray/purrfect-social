@@ -1,6 +1,11 @@
+# General
 node_modules
 public
 package-lock.json
+
+# Firebase
+.firebase
+.firebase-rc
 
 # Mac
 .DS_STORE
