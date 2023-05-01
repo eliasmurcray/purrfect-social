@@ -1,0 +1,59 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/poppins-v20-latin-regular.woff2') format('woff2'),
+       url('./fonts/poppins-v20-latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/poppins-v20-latin-500.woff2') format('woff2'),
+       url('./fonts/poppins-v20-latin-500.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./fonts/poppins-v20-latin-600.woff2') format('woff2'),
+       url('./fonts/poppins-v20-latin-600.woff') format('woff');
+}
+
+:root {
+  --gutter-size: 40px;
+  --layer-1: #0c0c10;
+  --layer-2: #1f1f25;
+  --layer-3: #564F54;
+  --brand-color: #DE4362;
+  --text-1: #ffffff;
+  --text-2: #d1e2df;
+}
+
+body {
+  background-color: var(--layer-1);
+  color: var(--text-1);
+	margin: 0;
+	font-family: Poppins, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  padding: 0 var(--gutter-size);
+  box-sizing: border-box;
+  column-gap: .5rem;
+  
+  h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+  }
+}

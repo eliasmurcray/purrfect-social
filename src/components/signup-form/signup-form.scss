@@ -1,0 +1,39 @@
+.signup-form {
+	margin: 0;
+	padding: var(--gutter-size) 0;
+	display: flex;
+	flex-flow: column;
+	align-items: flex-start;
+
+	input[type=text],
+	input[type=password] {
+		font: inherit;
+		padding: .75rem 1.25rem;
+		border: 0;
+		margin-bottom: 15px;
+		min-width: 250px;
+		border-radius: 4px;
+		background-color: var(--layer-2);
+		color: var(--text-1);
+		outline: none;
+
+		&::placeholder {
+			color: var(--text-2);
+		}
+	}
+
+	input[type=submit] {
+		font: inherit;
+		padding: .75rem 2rem;
+		border: 0;
+		background-color: var(--brand-color);
+		color: var(--text-1);
+		border-radius: 30px;
+		cursor: pointer;
+	}
+
+	input {
+		box-shadow: 4px 4px 10px #0004;
+	}
+}
+

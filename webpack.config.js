@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-// const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const names = [
   'index'
@@ -11,7 +11,7 @@ const names = [
 
 const entries = {};
 names.forEach((name) => {
-  entries[name] = '/src/components/' + name + '.tsx';
+  entries[name] = `/src/components/${name}/${name}.tsx`;
 });
 
 const plugins = [];
@@ -27,7 +27,7 @@ Object.keys(entries).forEach((entry) => {
 });
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: entries,
   module: {
     rules: [
@@ -65,6 +65,18 @@ module.exports = {
     ...plugins,
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: './src/images',
+          to: ''
+        },
+        {
+          from: './src/favicons',
+          to: ''
+        }
+      ]
     })
   ]
 };
